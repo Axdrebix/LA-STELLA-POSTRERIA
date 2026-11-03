@@ -1,5 +1,5 @@
-// Número telefónico general para hacer pedidos
-const NUMERO_WHATSAPP = "584120000000"; // Reemplazar con el número real
+// Número telefónico oficial de La Stella Postrería con código internacional (Venezuela: +58)
+const NUMERO_WHATSAPP = "584147614025";
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarProductos();
@@ -19,7 +19,7 @@ function cargarProductos() {
     .catch((error) => {
       console.error("Error al cargar productos:", error);
       document.getElementById("grid-productos").innerHTML = 
-        "<p>Ocurrió un error al cargar el catálogo de postres.</p>";
+        "<p style='text-align:center;'>Ocurrió un error al cargar el catálogo de postres.</p>";
     });
 }
 
@@ -28,9 +28,9 @@ function renderizarProductos(productos) {
   contenedorGrid.innerHTML = "";
 
   productos.forEach((producto) => {
-    // Generar mensaje dinámico para encargar el producto específico
+    // Mensaje automático personalizado para pedidos dirigidos a Luz
     const mensajeWA = encodeURIComponent(
-      `¡Hola! Me gustaría hacer un pedido de: ${producto.nombre} ($${producto.precio.toFixed(2)})`
+      `¡Hola, Luz! Me gustaría encargar el siguiente postre de La Stella: ${producto.nombre} ($${producto.precio.toFixed(2)})`
     );
     const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensajeWA}`;
 
@@ -38,7 +38,7 @@ function renderizarProductos(productos) {
     tarjeta.classList.add("card");
 
     tarjeta.innerHTML = `
-      <img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='https://via.placeholder.com/300x180?text=Postre'">
+      <img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='https://via.placeholder.com/300x180?text=La+Stella+Postre'">
       <div class="card-content">
         <div>
           <h3 class="card-title">${producto.nombre}</h3>

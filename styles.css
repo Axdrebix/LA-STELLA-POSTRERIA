@@ -1,3 +1,11 @@
+:root {
+  --color-principal: #B3294D; /* Amaranth Purple */
+  --color-secundario: #20817A; /* Skobeloff */
+  --color-acento: #F4C273; /* Earth Yellow */
+  --color-fondo: #F7E8C4; /* Dutch White suave */
+  --color-texto: #333333;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +14,8 @@
 }
 
 body {
-  background-color: #faf5f0;
-  color: #333;
+  background-color: #faf6f0;
+  color: var(--color-texto);
   line-height: 1.6;
 }
 
@@ -17,7 +25,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -26,7 +34,16 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #d81b60;
+  color: var(--color-principal);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  font-size: 0.9rem;
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-secundario);
+  font-weight: 600;
 }
 
 nav a {
@@ -37,19 +54,20 @@ nav a {
 }
 
 nav a:hover {
-  color: #d81b60;
+  color: var(--color-principal);
 }
 
 .contenedor {
   max-width: 1100px;
-  margin: 2rem auto;
+  margin: 2.5rem auto;
   padding: 0 1rem;
 }
 
 h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #4a154b;
+  color: var(--color-principal);
+  font-size: 2rem;
 }
 
 /* Grilla del Catálogo */
@@ -61,12 +79,17 @@ h2 {
 
 .card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card img {
@@ -86,23 +109,24 @@ h2 {
 .card-title {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #222;
 }
 
 .card-precio {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #d81b60;
+  color: var(--color-principal);
   margin: 0.8rem 0;
 }
 
 /* Estilos de botones */
 .btn-whatsapp {
-  display: inline-block;
+  display: block;
   text-align: center;
   background-color: #25d366;
   color: white;
-  padding: 0.6rem 1rem;
-  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -117,36 +141,46 @@ h2 {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 2.5rem auto;
+  font-size: 1.1rem;
+  color: #555;
 }
 
-.equipo {
+.equipo-unico {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
 }
 
 .tarjeta-dueno {
   background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 12px;
   text-align: center;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--color-acento);
 }
 
 .foto-dueno {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  border: 3px solid var(--color-fondo);
+}
+
+.tarjeta-dueno h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 0.2rem;
 }
 
 .cargo {
-  color: #777;
-  font-size: 0.9rem;
-  margin-bottom: 0.8rem;
+  color: var(--color-secundario);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -155,4 +189,5 @@ footer {
   background: #ffffff;
   margin-top: 3rem;
   color: #777;
+  border-top: 1px solid #eee;
 }
