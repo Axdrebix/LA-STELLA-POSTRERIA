@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Tentación | Postres Artesanales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dulce Tentación</div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#quienes-somos">Quiénes Somos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Catálogo -->
+    <section id="catalogo" class="contenedor">
+      <h2>Nuestros Postres</h2>
+      <div id="grid-productos" class="grid-productos">
+        <!-- Los productos se cargan dinámicamente desde app.js -->
+      </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section id="quienes-somos" class="contenedor quienes-somos">
+      <h2>Quiénes Somos</h2>
+      <p class="historia">
+        Somos un emprendimiento familiar apasionado por la repostería artesanal. Combinamos recetas tradicionales con ingredientes de alta calidad para llevar la mejor dulzura a tu mesa.
+      </p>
+
+      <div class="equipo">
+        <div class="tarjeta-dueno">
+          <img src="assets/imagenes/dueno1.jpg" alt="Fundador 1" class="foto-dueno">
+          <h3>María Pérez</h3>
+          <p class="cargo">Chef Repostera</p>
+          <p>Más de 5 años creando postres y perfeccionando sabores únicos.</p>
+          <!-- Reemplaza 584120000000 por tu número con código de país -->
+          <a href="https://wa.me/584120000000?text=%C2%A1Hola%20Mar%C3%ADa!%20Quiero%20hacer una consulta sobre los postres." 
+             target="_blank" class="btn-whatsapp">
+            Escribir a María
+          </a>
+        </div>
+
+        <div class="tarjeta-dueno">
+          <img src="assets/imagenes/dueno2.jpg" alt="Fundador 2" class="foto-dueno">
+          <h3>Carlos Gómez</h3>
+          <p class="cargo">Administración y Entregas</p>
+          <p>Encargado de la logística para que tus pedidos lleguen frescos y a tiempo.</p>
+          <a href="https://wa.me/584120000000?text=%C2%A1Hola%20Carlos!%20Quiero%20consultar sobre entregas y disponibilidad." 
+             target="_blank" class="btn-whatsapp">
+            Escribir a Carlos
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Dulce Tentación - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

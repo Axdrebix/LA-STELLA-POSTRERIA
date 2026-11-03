@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Torta Marquesa de Chocolate",
+    "descripcion": "Capas de galleta María y cremosa mezcla de chocolate oscuro.",
+    "precio": 15.00,
+    "imagen": "assets/imagenes/marquesa.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Tres Leches Tradicional",
+    "descripcion": "Bizcocho esponjoso bañado en tres tipos de leche con merengue italiano.",
+    "precio": 12.50,
+    "imagen": "assets/imagenes/tres-leches.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Pie de Limón",
+    "descripcion": "Base crocante de galleta con relleno cítrico y tostado de merengue.",
+    "precio": 10.00,
+    "imagen": "assets/imagenes/pie-limon.jpg"
+  }
+]
